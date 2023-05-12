@@ -1,105 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>KoroNight</title>
-  <style>
-    /* Add some basic styles to center the text on the screen */
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #000000;
-    }
+	<title>KoroNight - The Best Mobile Executor</title>
+	<style>
+		body {
+			background-color: #1c1c1e;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			text-align: center;
+		}
 
-    h1 {
-      font-size: 5rem;
-      font-weight: bold;
-      color: transparent;
-      text-shadow: 0 0 1rem #ffffff;
-      background: url("https://cdn.pixabay.com/photo/2019/12/20/21/16/galaxy-4715537_960_720.jpg") center/cover;
-      -webkit-background-clip: text;
-      animation: fade-in 2s ease-out;
-    }
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
 
-    /* Add an animation to fade in the text */
-    @keyframes fade-in {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+		.logo {
+			font-size: 60px;
+			font-weight: bold;
+			text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+			animation: flashing 1s infinite;
+		}
 
-    /* Add styles for the menu button */
-    .menu-button {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background-color: #ffffff;
-      color: #000000;
-      padding: 1rem;
-      font-weight: bold;
-      border-radius: 0.5rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-    }
+		@keyframes flashing {
+			0% {
+				color: #fff;
+			}
+			50% {
+				color: #00bfff;
+			}
+			100% {
+				color: #fff;
+			}
+		}
 
-    /* Add styles for the side menu */
-    .side-menu {
-      position: fixed;
-      top: 0;
-      right: -16rem;
-      width: 16rem;
-      height: 100vh;
-      background-color: #ffffff;
-      padding: 2rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-      transition: right 0.3s ease-out;
-      z-index: 1;
-    }
+		.main-menu {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
 
-    /* Add styles for the menu items */
-    .menu-item {
-      margin-top: 2rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
+		.button {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #00bfff;
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			border-radius: 5px;
+			margin-top: 20px;
+			text-decoration: none;
+		}
 
-    .menu-item:hover {
-      text-decoration: underline;
-    }
-
-    /* Add styles for the download button */
-    .download-button {
-      display: block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background-color: #6f42c1;
-      color: #ffffff;
-      font-weight: bold;
-      border-radius: 0.5rem;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease-out;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .download-button:hover {
-      background-color: #5e35b1;
-    }
-  </style>
+		.button:hover {
+			background-color: #0080ff;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
-  <!-- Add the KoroNight animation -->
-  <h1>KoroNight</h1>
-
-  <!-- Add the menu button -->
-  <div class="menu-button" onclick="toggleSideMenu()">Menu</div>
-
-  <!-- Add the side menu -->
-  <div class="side-menu" id="side-menu">
-    <div class="menu-item" onclick="closeSideMenu()">
+	<div class="container">
+		<div class="logo">
+			KoroNight
+		</div>
+		<script>
+			setTimeout(function() {
+				document.querySelector('.logo').innerHTML = 'Excuter';
+			}, 1000);
+		</script>
+		<div class="main-menu">
+			<div class="menu-item">
+				<h2>Download</h2>
+				<p>Start Your Experience Today With KoroNight - The Best Mobile Excuter</p>
+				<a href="https://www.youtube.com" target="_blank" class="button">Download Here</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
