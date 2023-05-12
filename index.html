@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KoroNight</title>
+  <style>
+    /* Add some basic styles to center the text on the screen */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000000;
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: bold;
+      color: transparent;
+      text-shadow: 0 0 1rem #ffffff;
+      background: url("https://cdn.pixabay.com/photo/2019/12/20/21/16/galaxy-4715537_960_720.jpg") center/cover;
+      -webkit-background-clip: text;
+      animation: fade-in 2s ease-out;
+    }
+
+    /* Add an animation to fade in the text */
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Add styles for the menu button */
+    .menu-button {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 1rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    /* Add styles for the side menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -16rem;
+      width: 16rem;
+      height: 100vh;
+      background-color: #ffffff;
+      padding: 2rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      transition: right 0.3s ease-out;
+      z-index: 1;
+    }
+
+    /* Add styles for the menu items */
+    .menu-item {
+      margin-top: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      text-decoration: underline;
+    }
+
+    /* Add styles for the download button */
+    .download-button {
+      display: block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #6f42c1;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease-out;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .download-button:hover {
+      background-color: #5e35b1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add the KoroNight animation -->
+  <h1>KoroNight</h1>
+
+  <!-- Add the menu button -->
+  <div class="menu-button" onclick="toggleSideMenu()">Menu</div>
+
+  <!-- Add the side menu -->
+  <div class="side-menu" id="side-menu">
+    <div class="menu-item" onclick="closeSideMenu()">
