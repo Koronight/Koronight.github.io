@@ -9,11 +9,16 @@
         font-family: 'Helvetica Neue', sans-serif;
         color: #fff;
       }
-      h1 {
-        font-size: 3.5rem;
-        margin-top: 5rem;
-        text-align: center;
-        animation: slideFromLeft 1s ease-out;
+      h1, h2, p {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+      }
+      h1, h2 {
+        animation-name: slideFromLeft;
+      }
+      p {
+        animation-name: fadeIn;
       }
       @keyframes slideFromLeft {
         0% {
@@ -21,6 +26,14 @@
         }
         100% {
           transform: translateX(0);
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
         }
       }
       .button {
@@ -52,5 +65,8 @@
         <a href="https://discord.gg/hZWPyuEpd5" class="button">Discord</a>
       </div>
     </div>
+    <h2>About</h2>
+    <p>Hello, if you're reading this, mods and owner, welcome you to the Vision Community Server. This is for chatting, and the other server is for downloading. This server is new, so sorry if not everything is done, but enjoy!</p>
+    <p>-Cluckmaster10</p>
   </body>
 </html>
