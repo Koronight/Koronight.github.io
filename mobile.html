@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobile</title>
+    <style>
+      /* CSS for galaxy theme */
+      body {
+        background: linear-gradient(to bottom, #00172D, #0E2358, #2A2D6B, #4B326C, #6C3565);
+        font-family: 'Helvetica Neue', sans-serif;
+        color: #fff;
+      }
+      h1, h2, h3, p {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+      }
+      h1, h2, h3 {
+        animation-name: slideFromLeft;
+      }
+      p {
+        animation-name: fadeIn;
+      }
+      @keyframes slideFromLeft {
+        0% {
+          transform: translateX(-200%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .button {
+        background-color: #FF00FF;
+        border: none;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        margin-top: 3rem;
+        display: block;
+        margin: auto;
+      }
+      .button:hover {
+        background-color: #fff;
+        color: #FF00FF;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mobile</h1>
+    <p style="text-align:center;">Download The Best Mobile Executer Today! That Has The Best OutstandingPreformense Evere</p>
+    <div style="text-align:center;">
+      <a href="https://www.youtube.com/" class="button">Download</a>
+    </div>
+  </body>
+</html>
