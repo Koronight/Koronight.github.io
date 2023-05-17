@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KoroNight Menu</title>
+    <title>Koronight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <style>
-      /* CSS for galaxy theme */
       body {
-        background: linear-gradient(to bottom, #00172D, #0E2358, #2A2D6B, #4B326C, #6C3565);
+        background: linear-gradient(to bottom, #00172D, #0E2358, #2A2D6B, #4B326C, #6C3565) no-repeat center center fixed;
         font-family: 'Helvetica Neue', sans-serif;
-        color: #fff;
-        font-size: 1.2em;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
       }
-      h1, h2, h3, p {
+            h1, h2, p {
         animation-duration: 1s;
         animation-fill-mode: both;
         animation-timing-function: ease-out;
       }
-      h1, h2, h3 {
+      h1, h2 {
         animation-name: slideFromLeft;
       }
       p {
@@ -37,68 +39,280 @@
           opacity: 1;
         }
       }
-      .menu {
-        margin: 3rem auto;
-        max-width: 800px;
-        padding: 1rem;
-        background-color: #382878;
-        border-radius: 10px;
-        opacity: 0.6;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        text-align: center;
+
+      .nav {
+        position: sticky;
+        top: 2px;
+        background :#0000008c;
+        width: 100%;
+        height: auto;
+        background-size: auto;
+        border-radius: 13px;
       }
-      .menu h2 {
-        margin-top: 0;
+
+      .nav-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
       }
-      .menu ul {
+
+      .logo-holder img {
+        height: 50px;
+      }
+
+      .name-holder h1 {
+        font-size: 24px;
+        font-weight: bold;
         margin: 0;
-        padding: 0;
+      }
+
+      ul {
         list-style: none;
         display: flex;
-        justify-content: space-evenly;
-        margin-bottom: 1rem;
+        margin: 0;
+        padding: 0;
       }
-      .menu li {
-        margin: 0 1rem;
+
+      li {
+        margin-right: 20px;
       }
-      .menu li a {
-        color: #fff;
+
+      a {
         text-decoration: none;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        transition: all 0.3s ease-out;
+        color: #ffffff;
+        font-weight: bold;
       }
-      .menu li a:hover {
-        background-color: #fff;
-        color: #333;
+
+      .nav-mobile {
+        display: none;
       }
-      .menu hr {
+
+      .nav-toggle {
+        display: none;
+        background: transparent;
         border: none;
-        height: 1px;
-        background-color: #fff;
-        margin: 1rem auto;
-        max-width: 600px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
       }
-      .menu p {
-        margin-bottom: 1rem;
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0000008c;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+
+      .nav-menu_visible {
+        display: block;
+      }
+
+      @media screen and (max-width: 768px) {
+        .nav-desktop {
+          display: none;
+        }
+
+        .nav-mobile {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+
+        }
+
+        .nav-toggle {
+          display: block;
+        }
+
+        .nav-menu {
+          display: none;
+          margin-top: 26px;
+        }
+
+        .nav-menu_visible {
+          display: block;
+          border-radius: 12px;
+        }
+
+        ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        li {
+          margin: 15px 10px;
+        }
+      }
+
+
+
+      .main {
+
+    }
+
+      .main h1 {
+        position: relative;
+        top: 100px;
+        font-size: 70px;
+    }
+
+       .main h3 {
+        position: relative;
+        top: 20px;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Style for buttons */
+        .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: #7337ac;
+        color: white;
+        font-size: 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        top: 50px;
+      }
+
+      /* Style for small screens */
+      @media only screen and (max-width: 768px) {
+
+
+        .btn {
+          display: block;
+          width: 30%;
+          margin: 10px auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+              .btn:hover {
+        background-color: #fff;
+        color: #FF00FF;
+      }
+        .main h1 {
+        position: relative;
+        top: 130px;
+        font-size: 70px;
+        text-align: center;
+    }
+    .main h3 {
+        position: relative;
+        top: 30px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: lighter;
+    }
+      }
+
+      /* Style for large screens */
+      @media only screen and (min-width: 769px) {
+        .btn {
+          display: inline-block;
+          width: auto;
+          margin-right: 10px;
+          left: 25px;
+        }
+        .main h1 {
+        position: relative;
+        top: 100px;
+        font-size: 70px;
+        left: 20px;
+        }
+        .main h3 {
+        position: relative;
+        top: 20px;
+        font-size: 20px;
+        left: 25px;
+        font-weight: lighter;
+    }
       }
     </style>
   </head>
+        <!--website made by Cm (Ur.dev)-->
   <body>
-    <div class="menu">
-      <h1>KoroNight</h1>
-      <h2>Menu</h2>
-      <ul>
-        <li><a href="features.html">Features</a></li>
-        <li><a href="Credits.html">Credits</a></li>
-      </ul>
-      <hr>
-      <h2>Download KoroNight</h2>
-      <p>Choose your platform:</p>
-      <ul>
-        <li><a href="pc.html">PC</a></li>
-        <li><a href="mobile.html">Android</a></li>
-      </ul>
+    <div class="nav">
+      <div class="nav-desktop">
+        <div class="logo-holder">
+          <img src="logo.png" alt="Logo">
+        </div>
+        <div class="name-holder">
+          <h1>KoroNight</h1>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-mobile">
+        <div class="logo">
+            <img src="logo.png" height="50px" alt="Logo">
+          </div>
+          <div class="name-holder">
+            <h1>KoroNight</h1>
+          </div>
+          <button class="nav-toggle"><img src="icons8-navigation-50.png" height="40px" alt="nav" srcset=""></button>
+          
+          <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Credits</a></li>
+          </ul>
+        </div>
     </div>
+
+
+
+
+      <div class="main">
+        <h1>KoroNight V1</h1> <br>
+        <h3>KoroNight V1 Releasing Soon</h3>
+
+
+        <div>
+              <a href="https://koronight.github.io/mobile.html" class="btn">Android</a>
+                    </div>
+            <a href="https://koronight.github.io/pc.html" class="btn">Pc</a>
+        </div>
+      </div>
+
+
+
+
+      <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+  
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('nav-menu_visible');
+        });
+      </script>
+    </body>
+
   </body>
-</html>
+  </html>
